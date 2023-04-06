@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fastify-service
+  namespace: fastify
+  labels:
+    app: fastify
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: fastify
+  template:
+    metadata:
+      labels:
+        app: fastify
+    spec:
+      containers:
+        - name: fastify
+          image: my-fastify-service-image:1680777461
+          ports:
+            - containerPort: 3000
+          lifecycle:
+            preStop:
+              exec:
+                command: ["sh", "-c", "echo 'Send SIGTERM to container'; kill 15 1"]

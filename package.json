@@ -1,0 +1,15 @@
+{
+  "name": "my-fastify-service",
+  "version": "1.0.0",
+  "description": "My Fastify service",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "dependencies": {
+    "fastify": "^3.20.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  }
+}

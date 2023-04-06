@@ -1,0 +1,64 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Log files
+*.log
+# Compiled output
+/dist/
+/build/
+/out/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Editor/IDE specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
+
+# Miscellaneous
+*.tmp
+*.bak
+*.cache
+*.log*
+*.backup
+*.bak*
+*.swp
+*.pyc
+*.pyo
+*.pyd
+*.pyc
+*.pyo
+*.pyd
+*.class
+*.war
+*.ear
+*.jar
+*.zip
+*.tar.gz
+*.rar
+*.gz
+*.bz2
+*.7z
+*.exe
+*.dll
+*.so
+*.dylib
+*.bak
+*.orig
+*.patch
+*.min.*
+*.min.js
+*.min.css
+*.min.map
