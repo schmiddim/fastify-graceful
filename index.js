@@ -8,6 +8,10 @@ app.get('/', async (request, reply) => {
 });
 
 process.on('SIGTERM', () => {
+    /** 
+      Problem: Pod is still in Replicaset during Sigint handling
+      Traffic to the pod shut be immediately cut off after sending the sigterm
+    */
     console.log('Received SIGTERM signal. Closing application gracefully...');
 
     const timer = setInterval(() => {
@@ -22,6 +26,7 @@ process.on('SIGTERM', () => {
 });
 process.on('SIGINT', () => {
     console.log('Received SIGINT signal. Closing application gracefully...');
+
 
     const timer = setInterval(() => {
         console.log(`Countdown: ${counter} seconds...`);
